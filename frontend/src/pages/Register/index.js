@@ -53,24 +53,27 @@ export default function Register() {
 
           <Link to="/" className="back-link">
             <FiArrowLeft size={16} color="#e02041" />
-            Não tenho cadastro
+            Já tenho cadastro
           </Link>
         </section>
 
         <form onSubmit={handleRegister}>
           <input
             placeholder="Nome da ONG"
+            maxlength="255"
             value={name}
             onChange={e => setName(e.target.value)}
           />
           <input
             type="email"
             placeholder="E-mail"
+            maxlength="255"
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
           <input
             placeholder="WhatsApp"
+            maxlength="11"
             value={whatsapp}
             onChange={e => setWhatsapp(e.target.value)}
           />
@@ -78,11 +81,13 @@ export default function Register() {
           <div className="input-group">
             <input
               placeholder="Cidade"
+              maxlength="255"
               value={city}
               onChange={e => setCity(e.target.value)}
             />
             <input
               placeholder="UF"
+              maxlength="2"
               style={{ width: 80 }}
               value={uf}
               onChange={e => setUf(e.target.value)}
@@ -92,7 +97,7 @@ export default function Register() {
           <button className="button" type="submit">
             Cadastrar
           </button>
-          
+
         </form>
       </div>
     </div>
