@@ -49,11 +49,11 @@ export default function Profile() {
         <img src={logoImg} alt="Be The Hero" />
         <span>Bem vinda, {ongName}</span>
 
-        <Link to="/incidents/new" className="button">
+        <Link to="/incidents/new" className="button" data-cy="new">
           Cadastrar novo caso
         </Link>
 
-        <button type="button" onClick={handleLogout}>
+        <button type="button" onClick={handleLogout} data-cy="signOut">
           <FiPower size={18} color="#e02041" />
         </button>
       </header>
@@ -81,6 +81,7 @@ export default function Profile() {
             {/* botão para deletar o inicident */}
             <button
               type="button"
+              data-cy="delete"
               onClick={() => handleDeleteIncident(incident.id)}
             >
               <FiTrash2 size={20} color="#a8a8b3" />

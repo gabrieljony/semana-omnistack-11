@@ -58,20 +58,23 @@ export default function NewIncident() {
           <input
             placeholder="Título do caso"
             value={title}
+            data-cy="title"
             onChange={e => setTitle(e.target.value)}
           />
           <textarea
             placeholder="Descrição"
             value={description}
+            data-cy="description"
             onChange={e => setDescription(e.target.value)}
           />
           <input
             placeholder="Valor em reais"
             value={value}
+            data-cy="value"
             onChange={e => setValue(e.target.value)}
           />
 
-          <button className="button" type="submit">
+          <button className="button" type="submit" data-cy="submit">
             Cadastrar
           </button>
         </form>
