@@ -62,6 +62,7 @@ export default function Register() {
             placeholder="Nome da ONG"
             maxlength="255"
             value={name}
+            data-cy="name"
             onChange={e => setName(e.target.value)}
           />
           <input
@@ -69,12 +70,14 @@ export default function Register() {
             placeholder="E-mail"
             maxlength="255"
             value={email}
+            data-cy="email"
             onChange={e => setEmail(e.target.value)}
           />
           <input
             placeholder="WhatsApp"
             maxlength="11"
             value={whatsapp}
+            data-cy="whatsapp"
             onChange={e => setWhatsapp(e.target.value)}
           />
 
@@ -83,6 +86,7 @@ export default function Register() {
               placeholder="Cidade"
               maxlength="255"
               value={city}
+              data-cy="city"
               onChange={e => setCity(e.target.value)}
             />
             <input
@@ -90,11 +94,12 @@ export default function Register() {
               maxlength="2"
               style={{ width: 80 }}
               value={uf}
+              data-cy="uf"
               onChange={e => setUf(e.target.value)}
             />
           </div>
 
-          <button className="button" type="submit">
+          <button className="button" type="submit" data-cy="submit">
             Cadastrar
           </button>
 

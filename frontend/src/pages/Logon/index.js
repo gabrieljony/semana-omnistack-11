@@ -40,9 +40,10 @@ export default function Logon() {
             placeholder="Sua ID"
             maxlength="8"
             value={id}
+            data-cy="idLogon"
             onChange={e => setId(e.target.value)}
           />
-          <button className="button" type="submit">
+          <button className="button" type="submit" data-cy="submit">
             Entrar
           </button>
           <Link to="/register" className="back-link">

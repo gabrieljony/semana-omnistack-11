@@ -22,6 +22,15 @@ npm install
 * 0.0.1
     * Trabalho em andamento
 
+## [Cypress](https://www.cypress.io/)
+
+Abrir a aplicação com a inicialização da estrutura de pasta do cypress:
+```sh
+npm run cypress:open
+```
+
+obs: Criou uma pasta cypress, com todas as pastas padrão e um arquivo padrão cypress.json
+
 ## Meta
 
 Gabriel Jony – [twitter](https://twitter.com/gabrieljonyb) - [linkedin](https://www.linkedin.com/in/gabriel-jony)
