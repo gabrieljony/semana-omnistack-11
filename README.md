@@ -8,12 +8,12 @@
 
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-stacks">Stacks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Cypress">Cypress</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licença">Licença</a>
+  <a href="#stacks">Stacks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#cypress">Cypress</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">Licença</a>
 </p>
 
 <br>
@@ -25,8 +25,6 @@ As Ongs cadastradas no sistema irão cadastrar os casos, para que possoas possam
 
 > Semana OmniStack 11.0 - Código da aplicação desenvolvida back (Express + knex + Sqlite3), front web (ReactJs), front mobile (React Native).
 
-![home](bethehero.png)
-
 ## Stacks
 
 Esse projeto foi construido com as seguintes stacks:
@@ -35,6 +33,10 @@ Esse projeto foi construido com as seguintes stacks:
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
 - [Cypress](https://www.cypress.io/) Testes automatizados e2e
+
+## Layout
+
+![home](bethehero.png)
 
 ## Instalação
 
