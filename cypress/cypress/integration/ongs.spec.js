@@ -1,5 +1,10 @@
 /// <reference types="cypress" />
 
+import Logon from '../support/pages/Logon'
+import Register from '../support/pages/Register'
+import Profiles from '../support/pages/Profiles'
+import NewIncident from '../support/pages/NewIncident'
+
 context('Actions', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/register')
@@ -9,11 +14,11 @@ context('Actions', () => {
         it('devem poder realizar um cadastro', () => {
             // cy.get - busca um elemento
             // .type - insere um texto - Nome da Ong Fake = Dogs queridos
-            cy.get('[data-cy=name]').type('Dogs queridos');
-            cy.get('[data-cy=email]').type('dogs@gmail.com.br');
-            cy.get('[data-cy=whatsapp]').type('1199999999');
-            cy.get('[data-cy=city]').type('São Paulo');
-            cy.get('[data-cy=uf]').type('SP');
+            // cy.get('[data-cy=name]').type('Dogs queridos');
+            // cy.get('[data-cy=email]').type('dogs@gmail.com.br');
+            // cy.get('[data-cy=whatsapp]').type('1199999999');
+            // cy.get('[data-cy=city]').type('São Paulo');
+            // cy.get('[data-cy=uf]').type('SP');
 
             // routing - onde a aplicação está se conectando com requisições HTTP
             // start server com cy.server()
@@ -21,16 +26,20 @@ context('Actions', () => {
             // atribuir rota a uma lias
             // esperar com cy.wait e fazer uma validação
 
-            cy.server();
-            cy.route('POST', '**/ongs').as('postOng');
+            // cy.server();
+            // cy.route('POST', '**/ongs').as('postOng');
 
-            cy.get('[data-cy=submit]').click();
+            // cy.get('[data-cy=submit]').click();
 
-            cy.wait('@postOng').then((xhr) => {
-                expect(xhr.status).be.eq(200);
-                expect(xhr.response.body).has.property('id');
-                expect(xhr.response.body.id).is.not.null;
-            })
+            // cy.wait('@postOng').then((xhr) => {
+            //     expect(xhr.status).be.eq(200);
+            //     expect(xhr.response.body).has.property('id');
+            //     expect(xhr.response.body.id).is.not.null;
+            // })
+
+            Register.acessarCadastro();
+            Register.preencherCadastro();
+            Register.validarCadastroDeOngComSucesso();
         })
     })
 })
@@ -42,9 +51,12 @@ describe('Login Ong', () => {
         // const createdOngId = Cypress.env('createdOngId');
         // cy.log(createdOngId);
 
-        cy.visit('http://localhost:3000');
-        cy.get('[data-cy=idLogon]').type(Cypress.env('createdOngId'));
-        cy.get('[data-cy=submit]').click();
+        // cy.visit('http://localhost:3000');
+        // cy.get('[data-cy=idLogon]').type(Cypress.env('createdOngId'));
+        // cy.get('[data-cy=submit]').click();
+
+        Logon.acessarLogin();
+        Logon.preencherLogin();
     });
 
     it('devem fazer logout', () => {
@@ -60,40 +72,47 @@ describe('Login Ong', () => {
         // });
 
         cy.login();
-        cy.get('[data-cy=signOut]').click();
+        // cy.get('[data-cy=signOut]').click();
+        Profiles.clicarNoBotaoLogout();
     });
 
     it('devem poder cadastrar novos casos', () => {
         cy.login();
-        cy.get('[data-cy=new]').click();
-        cy.get('[data-cy=title]').type('Adoção');
-        cy.get('[data-cy=description]').type('Adoção de Animais');
-        cy.get('[data-cy=value]').type(200);
+        Profiles.clicarNoBotaoDeNovosCasos();
 
-        cy.route('POST', '**/incidents').as('nemIncident');
+        // cy.get('[data-cy=title]').type('Adoção');
+        // cy.get('[data-cy=description]').type('Adoção de Animais');
+        // cy.get('[data-cy=value]').type(200);
 
-        cy.get('[data-cy=submit]').click();
+        // cy.route('POST', '**/incidents').as('nemIncident');
 
-        cy.wait('@nemIncident').then((xhr) => {
-            expect(xhr.status).be.eq(200);
-            expect(xhr.response.body).has.property('id');
-            expect(xhr.response.body.id).is.not.null;
-        })
+        // cy.get('[data-cy=submit]').click();
 
+        // cy.wait('@nemIncident').then((xhr) => {
+        //     expect(xhr.status).be.eq(200);
+        //     expect(xhr.response.body).has.property('id');
+        //     expect(xhr.response.body.id).is.not.null;
+        // })
+
+        NewIncident.preencherCadastroDeCAso();
+        NewIncident.validarCadastroDeCaso();
     });
 
     it('devem poder excluir um caso', () => {
         cy.createNewIncident();
         cy.login();
 
-        cy.route('DELETE', '**/incidents/*').as('deleteIncident');
+        // cy.route('DELETE', '**/incidents/*').as('deleteIncident');
 
-        cy.get('[data-cy=delete] > svg').click();
+        // cy.get('[data-cy=delete] > svg').click();
 
 
-        cy.wait('@deleteIncident').then((xhr) => {
-            expect(xhr.status).be.eq(200);
-            expect(xhr.response.body).has.property('msg').equal('Incident was successfully deleted');
-        })
+        // cy.wait('@deleteIncident').then((xhr) => {
+        //     expect(xhr.status).be.eq(200);
+        //     expect(xhr.response.body).has.property('msg').equal('Incident was successfully deleted');
+        // })
+
+        Profiles.clicarNoBotaoDeExcluirUmCasos();
+        Profiles.validarExclusaoDeCAsoComSucesso();
     });
 })
