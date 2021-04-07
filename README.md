@@ -1,26 +1,66 @@
-# SemanaOmnistack 11.0 - Be The Hero
-> Ajudar nos casos das Ongs cadastradas na plataforma.
+<h1 align="center">
+  Be The Hero
+</h1>
 
-As Ongs cadastradas no sistema irão cadastrar os casos, para que possoas possam ajudar nesses casos.
+<h4 align="center">
+  🚀 Semana OmniStack 11.0 🚀
+</h4>
+
+<p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-stacks">Stacks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Cypress">Cypress</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
+
+<br>
+
+## 💻 Projeto
+> Projeto desenvolvido para ajudar em casos de Ongs.
+
+As Ongs cadastradas no sistema irão cadastrar os casos, para que possoas possam ajudar.
 
 > Semana OmniStack 11.0 - Código da aplicação desenvolvida back (Express + knex + Sqlite3), front web (ReactJs), front mobile (React Native).
 
-![](../bethehero.png)
+![home](bethehero.png)
+
+## Stacks
+
+Esse projeto foi construido com as seguintes stacks:
+
+- [Node.js](https://nodejs.org/en/)
+- [React](https://reactjs.org)
+- [React Native](https://facebook.github.io/react-native/)
+- [Cypress](https://www.cypress.io/) Testes automatizados e2e
 
 ## Instalação
 
-Windows:
+Backend: http://localhost:3333
 
 ```sh
+cd backend/
 npm install
+npm start
 ```
 
-## Histórico de lançamentos
+Frontend: http://localhost:3000
 
-* 0.1.0
-    * Lançamento
-* 0.0.1
-    * Trabalho em andamento
+```sh
+cd frontend/
+npm install
+npm start
+```
+
+Cypress: 
+
+```sh
+cd cypress/
+npm install
+npm cypress:open
+```
 
 ## [Cypress](https://www.cypress.io/)
 
@@ -31,12 +71,6 @@ npm run cypress:open
 
 obs: Criou uma pasta cypress, com todas as pastas padrão e um arquivo padrão cypress.json
 
-## Meta
-
-Gabriel Jony – [twitter](https://twitter.com/gabrieljonyb) - [linkedin](https://www.linkedin.com/in/gabriel-jony)
-
-[https://github.com/gabrieljony/semana-omnistack-11](https://github.com/gabrieljony/)
-
 ## Contributing
 
 1. Faça o _fork_ do projeto (<https://github.com/gabrieljony/semana-omnistack-11/fork>)
@@ -44,3 +78,13 @@ Gabriel Jony – [twitter](https://twitter.com/gabrieljonyb) - [linkedin](https:
 3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
 4. _Push_ (`git push origin feature/fooBar`)
 5. Crie um novo _Pull Request_
+
+## License
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+<h4 align="center">
+    Desenvolvido por <a href="https://www.linkedin.com/in/gabriel-jony/">Gabriel Jony</a>
+</h4>
